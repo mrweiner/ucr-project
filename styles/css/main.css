@@ -1,20 +1,234 @@
-/* Error: Top-level selectors may not contain the parent selector "&".
- *    ,
- * 69 | .hws--table-to-half-round & {
- *    |                           ^
- *    '
- *   styles/scss/hws-components/_half-round.scss 69:27         @use
- *   styles/scss/ucr-custom-blocks/_expanding-card.scss 1:1    @use
- *   styles/scss/ucr-custom-blocks/ucr-custom-blocks.scss 3:1  @use
- *   styles/scss/main.scss 2:1                                 root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: Top-level selectors may not contain the parent selector "&".\a    \2577 \a 69 \2502  .hws--table-to-half-round & {\a    \2502                            ^\a    \2575 \a   styles/scss/hws-components/_half-round.scss 69:27         @use\a   styles/scss/ucr-custom-blocks/_expanding-card.scss 1:1    @use\a   styles/scss/ucr-custom-blocks/ucr-custom-blocks.scss 3:1  @use\a   styles/scss/main.scss 2:1                                 root stylesheet';
+:root {
+  --color-primary-blue: #003DA5;
+  --color-primary-gold: #FFB81C;
+  --color-secondary-green: #78BE20;
+  --color-secondary-blue: #009CDE;
+  --color-secondary-orange: #FF671F;
+  --color-secondary-yellow: #FBDB65;
+  --color-secondary-red: #E4002B;
+  --color-black: #000;
+  --color-gray-80: #4C4C4C;
+  --color-gray-60: #666666;
+  --color-gray-40: #999999;
+  --color-gray-20: #CCCCCC;
+  --color-gray-10: #E5E5E5;
+  --color-hws-basic-needs-red: #964461;
+  --color-hws-the-well-orange: #ED6621;
+  --color-hws-care-light-orange: #F99416;
+  --color-hws-caps-yellow: #FFB510;
+  --color-hws-swift-green: #8AC538;
+  --color-hws-case-management-teal: #298B84;
+  --color-hws-sdrc-blue-gray: #537782;
+  --color-hws-police-purple: #624991;
 }
+
+main > div#content-container .stat-container .stat {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0;
+}
+main > div#content-container .stat-container .stat-number {
+  --dims: 4em;
+  font-size: 45px;
+  padding: 0.5em;
+  display: flex;
+  gap: 0.15em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100em;
+  width: var(--dims);
+  height: var(--dims);
+  background: var(--color-primary-gold);
+  color: var(--color-primary-blue);
+}
+main > div#content-container .stat-container .stat-number::after {
+  margin: 0 auto;
+  border-color: var(--color-primary-blue);
+  width: 100%;
+}
+main > div#content-container .stat-container .stat-description {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: black;
+}
+
+.hero-slider.hero-slider .slider-text-bg-container {
+  background: transparent;
+}
+.hero-slider.hero-slider .slider-text-bg-container .slider-text-container .slider-text-area {
+  background: rgba(0, 0, 0, 0.8);
+  padding-block: 2em;
+}
+
+.hws--tables-to-half-round table:has(tr:first-child:last-child) {
+  --card-padding: 1rem;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tbody {
+  display: block;
+  border: none;
+  background: transparent;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(var(--cols), 1fr);
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child) {
+  --cols: 2;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child) {
+  --cols: 3;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child) {
+  --cols: 4;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
+  --cols: 5;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) td {
+  background: white;
+  padding: var(--card-padding);
+  border: none;
+  border-radius: 0 1em;
+  overflow: hidden;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) td:empty {
+  display: none;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) p[class*=callout] {
+  margin-top: calc(-1 * var(--card-padding));
+  margin-inline: calc(-1 * var(--card-padding));
+  font-size: 1.5em;
+  padding-block: 0.15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 5.25em;
+}
+
+div.card {
+  --bg-color: var(--color-gray-10);
+}
+div.card .card__expander {
+  background: var(--bg-color);
+  color: var(--color-black);
+  border: none;
+  box-shadow: none;
+}
+div.card .card__inner {
+  box-shadow: none;
+}
+div.card .expanding-card-background {
+  border-radius: 0 1em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+div.card.is-expanded .card__inner::after {
+  border-bottom-color: var(--bg-color);
+}
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) {
+  --card-padding: 1rem;
+}
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tbody {
+  display: block;
+  border: none;
+  background: transparent;
+}
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(var(--cols), 1fr);
+}
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child) {
+  --cols: 2;
+}
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child) {
+  --cols: 3;
+}
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child) {
+  --cols: 4;
+}
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
+  --cols: 5;
+}
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) td {
+  background: white;
+  padding: var(--card-padding);
+  border: none;
+  border-radius: 0 1em;
+  overflow: hidden;
+}
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) td:empty {
+  display: none;
+}
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) p[class*=callout] {
+  margin-top: calc(-1 * var(--card-padding));
+  margin-inline: calc(-1 * var(--card-padding));
+  font-size: 1.5em;
+  padding-block: 0.15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 5.25em;
+}
+
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark {
+  font-weight: 700;
+}
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) {
+  padding: 2em;
+}
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .media-object-section:has(.testimonial-author-image:empty) {
+  display: none;
+}
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section {
+  --testimonial-padding-left: 4rem;
+  min-height: 0;
+  height: auto;
+  padding: 0;
+  margin-inline: auto;
+}
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-content,
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-author {
+  color: var(--color-primary-blue) !important;
+}
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-content {
+  font-size: 2em;
+  line-height: 1.5;
+}
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-content blockqoute {
+  position: relative;
+  padding-left: var(--testimonial-padding-left);
+  display: block;
+  max-width: 100%;
+  width: 26em;
+}
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-content blockqoute::before {
+  position: absolute;
+  left: 0;
+  top: -2.48rem;
+  color: var(--color-primary-gold);
+  font-size: 4em;
+}
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-author {
+  margin-left: var(--testimonial-padding-left);
+  display: flex;
+  gap: 0.25em;
+  font-size: 1.5em;
+}
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-author::before {
+  display: block;
+  content: "-";
+}
+main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark .media-object-section {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */
