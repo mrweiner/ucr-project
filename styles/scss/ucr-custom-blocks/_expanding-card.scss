@@ -11,7 +11,13 @@ div.card {
     box-shadow: none;
   }
 
+  .card__inner {
+    box-shadow: none;
+  }
+
   .expanding-card-background {
+    @include half-round.half-round(false);
+
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -21,11 +27,12 @@ div.card {
     border-bottom-color: var(--bg-color);
   }
 
-  .hws--expanding-cards-table-to-half-round & {
+
+  @at-root .hws--expanding-cards-table-to-half-round & {
     .card_expander_body {
 
       // A table with only one row
-      @include half-round.half-round;
+      @include half-round.tables-to-half-round-cards;
     }
   }
 
