@@ -1,0 +1,72 @@
+main > div#content-container .testimonial-slider-container {
+  .testimonial-item.testimonial-font-dark {
+    //text-shadow: none;
+    font-weight: 700;
+
+
+    &:has(.testimonial-author-image:empty) {
+      padding: 2em;
+
+      .media-object-section:has(.testimonial-author-image:empty) {
+        display: none;
+      }
+
+      .media-object-section.main-section {
+
+      }
+
+      .testimonial-main-section {
+        --testimonial-padding-left: 4rem;
+        min-height: 0;
+        height: auto;
+        padding: 0;
+        margin-inline: auto;
+
+        .testimonial-content,
+        .testimonial-author {
+          color: var(--color-primary-blue) !important;
+        }
+
+        .testimonial-content {
+          font-size: 2em;
+          line-height: 1.5;
+
+          // misspelling is correct -- the actual element is not native <blockquote>
+          blockqoute {
+            position: relative;
+            padding-left: var(--testimonial-padding-left);
+            display: block;
+            max-width: 100%;
+            width: 26em;
+
+            &::before {
+              position: absolute;
+              left: 0;
+              top: -2.48rem;
+              color: var(--color-primary-gold);
+              font-size: 4em;
+            }
+          }
+        }
+
+        .testimonial-author {
+          margin-left: var(--testimonial-padding-left);
+          display: flex;
+          gap: .25em;
+          font-size: 1.5em;
+
+          &::before {
+            display: block;
+            content: '-';
+          }
+        }
+
+      }
+    }
+
+    .media-object-section {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
