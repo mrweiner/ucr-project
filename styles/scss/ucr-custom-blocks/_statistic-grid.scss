@@ -1,6 +1,9 @@
 
-
 main > div#content-container .stat-container {
+  //.paragraph--type--statistic {
+  //  padding: 0;
+  //}
+
   .stat {
     background: transparent;
     display: flex;
@@ -13,7 +16,7 @@ main > div#content-container .stat-container {
   .stat-number {
     --dims: 4em;
 
-    font-size: 32px;
+    font-size: 45px;
     padding: .5em;
     display: flex;
     gap: .15em;
