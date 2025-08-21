@@ -1,0 +1,41 @@
+:root {
+  --color-primary-blue: #003DA5;
+  --color-primary-gold: #FFB81C;
+}
+
+main > div#content-container .stat-container .stat {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0;
+}
+main > div#content-container .stat-container .stat-number {
+  --dims: 4em;
+  font-size: 32px;
+  padding: 0.5em;
+  display: flex;
+  gap: 0.15em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100em;
+  width: var(--dims);
+  height: var(--dims);
+  background: var(--color-primary-gold);
+  color: var(--color-primary-blue);
+}
+main > div#content-container .stat-container .stat-number::after {
+  margin: 0 auto;
+  border-color: var(--color-primary-blue);
+  width: 100%;
+}
+main > div#content-container .stat-container .stat-description {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: black;
+}
+
+/*# sourceMappingURL=main.css.map */
