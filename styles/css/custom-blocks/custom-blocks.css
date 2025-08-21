@@ -33,4 +33,12 @@ main > div#content-container .stat-container .stat-description {
   color: black;
 }
 
-/*# sourceMappingURL=index.css.map */
+.hero-slider.hero-slider .slider-text-bg-container {
+  background: transparent;
+}
+.hero-slider.hero-slider .slider-text-bg-container .slider-text-container .slider-text-area {
+  background: rgba(0, 0, 0, 0.8);
+  padding-block: 2em;
+}
+
+/*# sourceMappingURL=custom-blocks.css.map */

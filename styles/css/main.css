@@ -7,11 +7,11 @@
   --color-secondary-yellow: #FBDB65;
   --color-secondary-red: #E4002B;
   --color-black: #000;
-  --color-black-80: #4C4C4C;
-  --color-black-60: #666666;
-  --color-black-40: #999999;
-  --color-black-20: #CCCCCC;
-  --color-black-10: #E5E5E5;
+  --color-gray-80: #4C4C4C;
+  --color-gray-60: #666666;
+  --color-gray-40: #999999;
+  --color-gray-20: #CCCCCC;
+  --color-gray-10: #E5E5E5;
   --color-hws-basic-needs-red: #964461;
   --color-hws-the-well-orange: #ED6621;
   --color-hws-care-light-orange: #F99416;
@@ -55,6 +55,14 @@ main > div#content-container .stat-container .stat-description {
   text-transform: capitalize;
   font-weight: 600;
   color: black;
+}
+
+.hero-slider.hero-slider .slider-text-bg-container {
+  background: transparent;
+}
+.hero-slider.hero-slider .slider-text-bg-container .slider-text-container .slider-text-area {
+  background: rgba(0, 0, 0, 0.8);
+  padding-block: 2em;
 }
 
 /*# sourceMappingURL=main.css.map */
