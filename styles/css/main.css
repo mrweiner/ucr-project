@@ -1,126 +1,20 @@
-:root {
-  --color-primary-blue: #003DA5;
-  --color-primary-gold: #FFB81C;
-  --color-secondary-green: #78BE20;
-  --color-secondary-blue: #009CDE;
-  --color-secondary-orange: #FF671F;
-  --color-secondary-yellow: #FBDB65;
-  --color-secondary-red: #E4002B;
-  --color-black: #000;
-  --color-gray-80: #4C4C4C;
-  --color-gray-60: #666666;
-  --color-gray-40: #999999;
-  --color-gray-20: #CCCCCC;
-  --color-gray-10: #E5E5E5;
-  --color-hws-basic-needs-red: #964461;
-  --color-hws-the-well-orange: #ED6621;
-  --color-hws-care-light-orange: #F99416;
-  --color-hws-caps-yellow: #FFB510;
-  --color-hws-swift-green: #8AC538;
-  --color-hws-case-management-teal: #298B84;
-  --color-hws-sdrc-blue-gray: #537782;
-  --color-hws-police-purple: #624991;
-}
+/* Error: Top-level selectors may not contain the parent selector "&".
+ *    ,
+ * 69 | .hws--table-to-half-round & {
+ *    |                           ^
+ *    '
+ *   styles/scss/hws-components/_half-round.scss 69:27         @use
+ *   styles/scss/ucr-custom-blocks/_expanding-card.scss 1:1    @use
+ *   styles/scss/ucr-custom-blocks/ucr-custom-blocks.scss 3:1  @use
+ *   styles/scss/main.scss 2:1                                 root stylesheet */
 
-main > div#content-container .stat-container .stat {
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25em;
-  padding: 0;
-}
-main > div#content-container .stat-container .stat-number {
-  --dims: 4em;
-  font-size: 32px;
-  padding: 0.5em;
-  display: flex;
-  gap: 0.15em;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100em;
-  width: var(--dims);
-  height: var(--dims);
-  background: var(--color-primary-gold);
-  color: var(--color-primary-blue);
-}
-main > div#content-container .stat-container .stat-number::after {
-  margin: 0 auto;
-  border-color: var(--color-primary-blue);
-  width: 100%;
-}
-main > div#content-container .stat-container .stat-description {
-  font-size: 18px;
-  text-transform: capitalize;
-  font-weight: 600;
-  color: black;
-}
-
-.hero-slider.hero-slider .slider-text-bg-container {
-  background: transparent;
-}
-.hero-slider.hero-slider .slider-text-bg-container .slider-text-container .slider-text-area {
-  background: rgba(0, 0, 0, 0.8);
-  padding-block: 2em;
-}
-
-div.card {
-  --bg-color: var(--color-gray-10);
-}
-div.card .card__expander {
-  background: var(--bg-color);
-  color: var(--color-black);
-  border: none;
-  box-shadow: none;
-}
-div.card.is-expanded .card__inner::after {
-  border-bottom-color: var(--bg-color);
-}
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) {
-  --card-padding: 1rem;
-}
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tbody {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  border: none;
-  background: transparent;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Top-level selectors may not contain the parent selector "&".\a    \2577 \a 69 \2502  .hws--table-to-half-round & {\a    \2502                            ^\a    \2575 \a   styles/scss/hws-components/_half-round.scss 69:27         @use\a   styles/scss/ucr-custom-blocks/_expanding-card.scss 1:1    @use\a   styles/scss/ucr-custom-blocks/ucr-custom-blocks.scss 3:1  @use\a   styles/scss/main.scss 2:1                                 root stylesheet';
 }
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
-  display: grid;
-  gap: 1em;
-  grid-template-columns: repeat(var(--cols), 1fr);
-}
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child) {
-  --cols: 2;
-}
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child) {
-  --cols: 3;
-}
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child) {
-  --cols: 4;
-}
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
-  --cols: 5;
-}
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) td {
-  background: white;
-  padding: var(--card-padding);
-  border: none;
-  border-radius: 0 1em;
-  overflow: hidden;
-}
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) td:empty {
-  display: none;
-}
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) p[class*=callout] {
-  margin-top: calc(-1 * var(--card-padding));
-  margin-inline: calc(-1 * var(--card-padding));
-  font-size: 1.5em;
-  padding-block: 0.15em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 5.25em;
-}
-
-/*# sourceMappingURL=main.css.map */

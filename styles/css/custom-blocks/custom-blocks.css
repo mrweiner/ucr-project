@@ -50,6 +50,11 @@ div.card .card__expander {
   border: none;
   box-shadow: none;
 }
+div.card .expanding-card-background {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 div.card.is-expanded .card__inner::after {
   border-bottom-color: var(--bg-color);
 }
@@ -72,7 +77,7 @@ div.card.is-expanded .card__inner::after {
 .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child) {
   --cols: 3;
 }
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child) {
+.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child) {
   --cols: 4;
 }
 .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
