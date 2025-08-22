@@ -27,9 +27,10 @@ main > div#content-container .stat-container .stat-number::after {
   width: 100%;
 }
 main > div#content-container .stat-container .stat-description {
-  font-size: 18px;
+  line-height: 1.4;
+  font-size: 26px;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 500;
   color: black;
 }
 
@@ -105,6 +106,9 @@ div.card .expanding-card-background {
   background-position: center center;
   background-size: cover;
 }
+div.card.is-expanded .card__inner {
+  background: none;
+}
 div.card.is-expanded .card__inner::after {
   border-bottom-color: var(--bg-color);
 }
@@ -154,7 +158,48 @@ div.card.is-expanded .card__inner::after {
   min-height: 5.25em;
 }
 
+.hws--expanding-cards-square div.card .card__inner {
+  aspect-ratio: 1/1;
+}
+.hws--expanding-cards-square div.card.is-expanded .expanding-card-background {
+  background-color: rgba(0, 61, 165, 0.25) !important;
+  background-blend-mode: multiply;
+}
+.hws--expanding-cards-square div.card .expanding-card-background {
+  display: flex;
+  flex-direction: column;
+}
+.hws--expanding-cards-square div.card span:has(> [class*=callout]) {
+  --default-ucr-bg-element-padding: 1em;
+  margin-top: auto;
+  margin-inline: calc(-1 * var(--default-ucr-bg-element-padding));
+}
+.hws--expanding-cards-square div.card [class*=callout] {
+  font-weight: bold;
+  font-size: 28px;
+  padding-block: 0.15em;
+}
+.hws--expanding-cards-square div.card [class*=callout] > * {
+  display: flex;
+  justify-content: center;
+  gap: 0.25em;
+}
+.hws--expanding-cards-square div.card [class*=callout] > *::after {
+  display: block;
+  content: ">>";
+  font-weight: initial;
+}
+.hws--expanding-cards-square div.card:hover .card__inner {
+  background: transparent;
+}
+
+.cell:has(.testimonial-slider-container) {
+  padding-inline: 0 !important;
+}
+
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark {
+  height: 25em;
+  background-position: center center !important;
   font-weight: 700;
 }
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) {
@@ -167,8 +212,9 @@ main > div#content-container .testimonial-slider-container .testimonial-item.tes
   --testimonial-padding-left: 4rem;
   min-height: 0;
   height: auto;
-  padding: 0;
+  padding: 1em;
   margin-inline: auto;
+  background: rgba(255, 255, 255, 0.8);
 }
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-content,
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-author {

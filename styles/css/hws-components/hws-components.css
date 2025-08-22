@@ -44,4 +44,28 @@
   min-height: 5.25em;
 }
 
+main .layout:has(.hws--bg-blue) {
+  background: linear-gradient(to right, var(--color-primary-blue), #2C6BBF);
+  margin-bottom: 2em;
+}
+main .layout:has(.hws--bg-blue):not(.full) {
+  max-width: 100%;
+}
+main .layout:has(.hws--bg-blue):not(.full) > .grid-x {
+  max-width: 75rem;
+  margin-inline: auto;
+}
+main .layout:has(.hws--bg-blue) .separator-line-gold-after {
+  color: white;
+}
+main .layout:has(.hws--bg-blue) .separator-line-gold-after::after {
+  margin-bottom: 0;
+}
+main .layout:has(.hws--bg-blue) .ucr-custom-block {
+  margin-bottom: 0;
+}
+main .layout:has(.hws--bg-blue) .layout-builder-block {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 /*# sourceMappingURL=hws-components.css.map */
