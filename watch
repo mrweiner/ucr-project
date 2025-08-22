@@ -1,0 +1,6 @@
+#!/bin/bash
+tmux new-session -d -s dev_session
+tmux send-keys -t dev_session "sass --watch styles/scss:styles/css" C-m
+tmux split-window -h -t dev_session "python3 -m http.server 3333"
+tmux split-window -v -t dev_session "ngrok http 3333 --url mrweiner.ngrok.dev"
+tmux attach -t dev_session

@@ -4,9 +4,28 @@ Custom styles for UCR's HWS departments.
 
 # How It Works
 
+```
 sass --watch styles/scss:styles/css
 python3 -m http.server 3333
 ngrok http 3333 --url mrweiner.ngrok.dev
+```
+
+Recommended:
+
+```
+tmux new-session \; \
+send-keys "sass --watch styles/scss:styles/css" C-m \; \
+split-window -h "python3 -m http.server 3333" \; \
+split-window -v "ngrok http 3333 --url mrweiner.ngrok.dev" \; \
+attach
+```
+
+Or from the root run:
+
+```
+chmod +x watch
+./watch
+```
 
 ## UI Classes
 
