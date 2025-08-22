@@ -1,0 +1,30 @@
+main .layout:has(.hws--bg-blue) {
+  background: linear-gradient(to right, var(--color-primary-blue), #2C6BBF);
+  margin-bottom: 2em;
+
+  &:not(.full) {
+    max-width: 100%;
+
+    > .grid-x {
+      max-width: 75rem;
+      margin-inline: auto;
+    }
+  }
+
+  .separator-line-gold-after {
+    color: white;
+
+    &::after {
+      margin-bottom: 0;
+    }
+  }
+
+  .ucr-custom-block {
+    margin-bottom: 0;
+  }
+
+  // So that the editor doesn't show white text on a white bg for blocks.
+  .layout-builder-block {
+    background: rgba(255, 255, 255, .1)
+  }
+}
