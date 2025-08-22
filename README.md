@@ -27,6 +27,12 @@ chmod +x watch
 ./watch
 ```
 
+to end tmux:
+
+```
+tmux kill-server
+```
+
 ## UI Classes
 
 If a set of styles can be applied optionally by content admins, they should be set via classes prefixed with `.hws--`.
