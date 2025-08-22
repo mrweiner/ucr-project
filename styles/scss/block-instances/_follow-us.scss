@@ -14,11 +14,49 @@
 
   tr {
     display: flex;
+    gap: 1em;
   }
 
   td {
     display: block;
+    padding: 0;
   }
 
+  .cell {
+    width: 750px;
+    max-width: 100%;
+    margin-inline: auto;
+
+    > :has(>img) {
+      max-width: 30%;
+      margin-right: 3em;
+    }
+
+    h3 {
+      margin-top: 7% !important;
+    }
+  }
+
+  //.cell {
+  //  display: grid;
+  //  grid-template-columns: 1fr 1fr;
+  //  grid-template-rows: 1fr; /* single row enforced */
+  //  grid-template-areas:
+  //  "a b"
+  //  "a c"; /* item1 spans both rows */
+  //  gap: 1rem;
+  //
+  //  > :first-child {
+  //    grid-area: a;
+  //  }
+  //
+  //  > :nth-child(2) {
+  //    grid-area: b;
+  //  }
+  //
+  //  > :last-child {
+  //    grid-area: c;
+  //  }
+  //}
 
 }

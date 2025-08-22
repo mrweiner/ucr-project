@@ -1,0 +1,17 @@
+[data-block-plugin-id="views_block:event_list-events_latest_block"] {
+
+}
+
+main > div#content-container .events-container {
+  .event-block-item {
+    min-height: 420px;
+  }
+
+  .event-image:not(:has(img)) {
+    display: block;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 1.775 / 1;
+    background: linear-gradient(to top right, var(--color-primary-blue), var(--color-primary-gold));
+  }
+}
