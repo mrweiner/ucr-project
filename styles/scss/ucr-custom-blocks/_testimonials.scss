@@ -1,8 +1,15 @@
+.cell:has(.testimonial-slider-container) {
+  padding-inline: 0 !important;
+}
+
 main > div#content-container .testimonial-slider-container {
+
   .testimonial-item.testimonial-font-dark {
+    height: 25em;
+    background-position: center center !important;
+
     //text-shadow: none;
     font-weight: 700;
-
 
     &:has(.testimonial-author-image:empty) {
       padding: 2em;
@@ -19,8 +26,10 @@ main > div#content-container .testimonial-slider-container {
         --testimonial-padding-left: 4rem;
         min-height: 0;
         height: auto;
-        padding: 0;
+        padding: 1em;
         margin-inline: auto;
+        background: rgba(255, 255, 255, .8);
+
 
         .testimonial-content,
         .testimonial-author {
