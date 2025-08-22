@@ -44,6 +44,7 @@ main > div#content-container .stat-container .stat-description {
 
 .hws--tables-to-half-round table:has(tr:first-child:last-child) {
   --card-padding: 1rem;
+  container: table-half-round-cards/inline-size;
 }
 .hws--tables-to-half-round table:has(tr:first-child:last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tbody {
   display: block;
@@ -53,19 +54,27 @@ main > div#content-container .stat-container .stat-description {
 .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
   display: grid;
   gap: 1em;
-  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-columns: repeat(var(--cols, 1), 1fr);
 }
-.hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child) {
-  --cols: 2;
+@container table-half-round-cards (min-width: 40em) {
+  .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(6):last-child) {
+    --cols: 2;
+  }
 }
-.hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child) {
-  --cols: 3;
+@container table-half-round-cards (min-width: 60em) {
+  .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(6):last-child) {
+    --cols: 3;
+  }
 }
-.hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child) {
-  --cols: 4;
+@container table-half-round-cards (min-width: 70em) {
+  .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child) {
+    --cols: 4;
+  }
 }
-.hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
-  --cols: 5;
+@container table-half-round-cards (min-width: 85em) {
+  .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
+    --cols: 5;
+  }
 }
 .hws--tables-to-half-round table:has(tr:first-child:last-child) td {
   background: white;
@@ -114,6 +123,7 @@ div.card.is-expanded .card__inner::after {
 }
 .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) {
   --card-padding: 1rem;
+  container: table-half-round-cards/inline-size;
 }
 .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tbody {
   display: block;
@@ -123,19 +133,27 @@ div.card.is-expanded .card__inner::after {
 .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
   display: grid;
   gap: 1em;
-  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-columns: repeat(var(--cols, 1), 1fr);
 }
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child) {
-  --cols: 2;
+@container table-half-round-cards (min-width: 40em) {
+  .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(6):last-child) {
+    --cols: 2;
+  }
 }
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child) {
-  --cols: 3;
+@container table-half-round-cards (min-width: 60em) {
+  .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child), .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(6):last-child) {
+    --cols: 3;
+  }
 }
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child) {
-  --cols: 4;
+@container table-half-round-cards (min-width: 70em) {
+  .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child) {
+    --cols: 4;
+  }
 }
-.hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
-  --cols: 5;
+@container table-half-round-cards (min-width: 85em) {
+  .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
+    --cols: 5;
+  }
 }
 .hws--expanding-cards-table-to-half-round div.card .card_expander_body table:has(tr:first-child:last-child) td {
   background: white;
@@ -169,22 +187,22 @@ div.card.is-expanded .card__inner::after {
   display: flex;
   flex-direction: column;
 }
-.hws--expanding-cards-square div.card span:has(> [class*=callout]) {
+.hws--expanding-cards-square div.card .expanding-card-background span:has(> [class*=callout]) {
   --default-ucr-bg-element-padding: 1em;
   margin-top: auto;
   margin-inline: calc(-1 * var(--default-ucr-bg-element-padding));
 }
-.hws--expanding-cards-square div.card [class*=callout] {
+.hws--expanding-cards-square div.card .expanding-card-background [class*=callout] {
   font-weight: bold;
   font-size: 28px;
   padding-block: 0.15em;
 }
-.hws--expanding-cards-square div.card [class*=callout] > * {
+.hws--expanding-cards-square div.card .expanding-card-background [class*=callout] > * {
   display: flex;
   justify-content: center;
   gap: 0.25em;
 }
-.hws--expanding-cards-square div.card [class*=callout] > *::after {
+.hws--expanding-cards-square div.card .expanding-card-background [class*=callout] > *::after {
   display: block;
   content: ">>";
   font-weight: initial;

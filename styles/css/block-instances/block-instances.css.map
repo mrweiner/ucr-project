@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../scss/block-instances/_follow-us.scss"],"names":[],"mappings":"AACE;EACE;;AAGF;EACE;;AAEA;EACE;EACA;;AAIJ;EACE;;AAGF;EACE","file":"block-instances.css"}
+{"version":3,"sourceRoot":"","sources":["../../scss/block-instances/_follow-us.scss","../../scss/block-instances/_event-list.scss"],"names":[],"mappings":"AACE;EACE;;AAGF;EACE;;AAEA;EACE;EACA;;AAIJ;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;;;AC9BJ;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA","file":"block-instances.css"}
