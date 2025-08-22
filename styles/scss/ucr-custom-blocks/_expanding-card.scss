@@ -23,8 +23,12 @@ div.card {
     background-size: cover;
   }
 
-  &.is-expanded .card__inner::after {
-    border-bottom-color: var(--bg-color);
+  &.is-expanded .card__inner {
+    background: none;
+
+    &::after {
+      border-bottom-color: var(--bg-color);
+    }
   }
 
 
@@ -36,4 +40,51 @@ div.card {
     }
   }
 
+  @at-root .hws--expanding-cards-square & {
+    .card__inner {
+      aspect-ratio: 1 / 1;
+    }
+
+    &.is-expanded {
+      .expanding-card-background {
+        background-color: rgba(0, 61, 165, 0.25) !important;
+        background-blend-mode: multiply;
+      }
+    }
+
+    .expanding-card-background {
+      display: flex;
+      flex-direction: column;
+    }
+
+    span:has(> [class*=callout]) {
+      --default-ucr-bg-element-padding: 1em;
+      margin-top: auto;
+      margin-inline: calc(-1 * var(--default-ucr-bg-element-padding));
+    }
+
+    [class*=callout] {
+      font-weight: bold;
+      font-size: 28px;
+      padding-block: .15em;
+
+      > * {
+        display: flex;
+        justify-content: center;
+        gap: .25em;
+
+        &::after {
+          display: block;
+          content: '>>';
+          font-weight: initial;
+        }
+      }
+    }
+
+    &:hover {
+      .card__inner {
+        background: transparent;
+      }
+    }
+  }
 }
