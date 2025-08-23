@@ -40,4 +40,78 @@ main > div#content-container .events-container .event-image:not(:has(img)) {
   background: linear-gradient(to top right, var(--color-primary-blue), var(--color-primary-gold));
 }
 
+.hws--tables-to-half-round table:has(tr:first-child:last-child) {
+  --card-padding: 1rem;
+  container: table-half-round-cards/inline-size;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tbody {
+  display: block;
+  border: none;
+  background: transparent;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(var(--cols, 1), 1fr);
+}
+@container table-half-round-cards (min-width: 40em) {
+  .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(1):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(2):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(6):last-child) {
+    --cols: 2;
+  }
+}
+@container table-half-round-cards (min-width: 60em) {
+  .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(3):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child), .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(6):last-child) {
+    --cols: 3;
+  }
+}
+@container table-half-round-cards (min-width: 70em) {
+  .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(4):last-child) {
+    --cols: 4;
+  }
+}
+@container table-half-round-cards (min-width: 85em) {
+  .hws--tables-to-half-round table:has(tr:first-child:last-child) tr:first-child:last-child:has(td:nth-child(5):last-child) {
+    --cols: 5;
+  }
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) td {
+  background: white;
+  padding: var(--card-padding);
+  border: none;
+  border-radius: 0 1em;
+  overflow: hidden;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) td:empty {
+  display: none;
+}
+.hws--tables-to-half-round table:has(tr:first-child:last-child) p[class*=callout] {
+  margin-top: calc(-1 * var(--card-padding));
+  margin-inline: calc(-1 * var(--card-padding));
+  font-size: 1.5em;
+  padding-block: 0.15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 5.25em;
+}
+
+[data-block-plugin-id="block_content:0a46e72c-2147-494a-a237-5641c25f2108"] {
+  border-radius: 0 1em;
+  overflow: hidden;
+  background: var(--color-hws-gray-bg);
+  padding: 2em;
+}
+[data-block-plugin-id="block_content:0a46e72c-2147-494a-a237-5641c25f2108"] h2 {
+  font-size: 20px !important;
+}
+[data-block-plugin-id="block_content:0a46e72c-2147-494a-a237-5641c25f2108"] h2 .separator-line-dark-after::after {
+  height: 1px;
+}
+[data-block-plugin-id="block_content:0a46e72c-2147-494a-a237-5641c25f2108"] p {
+  font-size: 14px;
+}
+[data-block-plugin-id="block_content:0a46e72c-2147-494a-a237-5641c25f2108"] p:last-child {
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=block-instances.css.map */

@@ -79,6 +79,8 @@ main .layout:has(.hws--bg-blue) .layout-builder-block {
 
 main > div#content-container div.primary-content-area .general-menu {
   border-top: none;
+  padding-bottom: 0;
+  margin-bottom: 1.5rem;
 }
 main > div#content-container div.primary-content-area .general-menu h2 {
   text-align: left;

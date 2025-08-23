@@ -1,0 +1,23 @@
+@use "../hws-components/half-round";
+
+[data-block-plugin-id="block_content:0a46e72c-2147-494a-a237-5641c25f2108"] {
+  @include half-round.half-round(true);
+  background: var(--color-hws-gray-bg);
+  padding: 2em;
+
+  h2 {
+    font-size: 20px !important;
+
+    .separator-line-dark-after::after {
+      height: 1px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
