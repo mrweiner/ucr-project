@@ -18,18 +18,23 @@ main > div#content-container .testimonial-slider-container {
         display: none;
       }
 
-      .media-object-section.main-section {
-
-      }
-
       .testimonial-main-section {
-        --testimonial-padding-left: 4rem;
+        --font-size: .6rem;
+        --testimonial-padding-left: calc(4 * var(--font-size));
         min-height: 0;
         height: auto;
         padding: 1em;
         margin-inline: auto;
         background: rgba(255, 255, 255, .8);
+        font-size: var(--font-size);
 
+        @media(min-width: 30em) {
+          --font-size: .8rem;
+        }
+
+        @media(min-width: 60em) {
+          --font-size: 1rem;
+        }
 
         .testimonial-content,
         .testimonial-author {
@@ -45,8 +50,8 @@ main > div#content-container .testimonial-slider-container {
             position: relative;
             padding-left: var(--testimonial-padding-left);
             display: block;
-            max-width: 100%;
-            width: 26em;
+            width: 100%;
+            max-width: 26em;
 
             &::before {
               position: absolute;

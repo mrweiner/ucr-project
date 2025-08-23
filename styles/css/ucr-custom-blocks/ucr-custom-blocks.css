@@ -227,12 +227,24 @@ main > div#content-container .testimonial-slider-container .testimonial-item.tes
   display: none;
 }
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section {
-  --testimonial-padding-left: 4rem;
+  --font-size: .6rem;
+  --testimonial-padding-left: calc(4 * var(--font-size));
   min-height: 0;
   height: auto;
   padding: 1em;
   margin-inline: auto;
   background: rgba(255, 255, 255, 0.8);
+  font-size: var(--font-size);
+}
+@media (min-width: 30em) {
+  main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section {
+    --font-size: .8rem;
+  }
+}
+@media (min-width: 60em) {
+  main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section {
+    --font-size: 1rem;
+  }
 }
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-content,
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-author {
@@ -246,8 +258,8 @@ main > div#content-container .testimonial-slider-container .testimonial-item.tes
   position: relative;
   padding-left: var(--testimonial-padding-left);
   display: block;
-  max-width: 100%;
-  width: 26em;
+  width: 100%;
+  max-width: 26em;
 }
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-content blockqoute::before {
   position: absolute;

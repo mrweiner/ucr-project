@@ -77,4 +77,40 @@ main .layout:has(.hws--bg-blue) .layout-builder-block {
   background: rgba(255, 255, 255, 0.1);
 }
 
+main > div#content-container div.primary-content-area .general-menu {
+  border-top: none;
+}
+main > div#content-container div.primary-content-area .general-menu h2 {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-primary-blue);
+  text-transform: capitalize;
+  padding: 0;
+  border: none;
+  margin-bottom: 0.5em;
+}
+main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li a {
+  font-size: 12px;
+  font-weight: 300;
+  padding: 0.75em 0;
+  color: var(--color-primary-blue);
+  border-bottom-color: var(--color-primary-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li a.is-active {
+  color: var(--color-secondary-blue);
+  font-weight: bold;
+}
+main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li a::after {
+  display: none;
+}
+main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li a:hover, main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li a:focus {
+  text-decoration: underline;
+}
+main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li:last-child a {
+  border-bottom: none;
+}
+
 /*# sourceMappingURL=hws-components.css.map */

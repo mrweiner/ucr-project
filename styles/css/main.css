@@ -251,12 +251,24 @@ main > div#content-container .testimonial-slider-container .testimonial-item.tes
   display: none;
 }
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section {
-  --testimonial-padding-left: 4rem;
+  --font-size: .6rem;
+  --testimonial-padding-left: calc(4 * var(--font-size));
   min-height: 0;
   height: auto;
   padding: 1em;
   margin-inline: auto;
   background: rgba(255, 255, 255, 0.8);
+  font-size: var(--font-size);
+}
+@media (min-width: 30em) {
+  main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section {
+    --font-size: .8rem;
+  }
+}
+@media (min-width: 60em) {
+  main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section {
+    --font-size: 1rem;
+  }
 }
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-content,
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-author {
@@ -270,8 +282,8 @@ main > div#content-container .testimonial-slider-container .testimonial-item.tes
   position: relative;
   padding-left: var(--testimonial-padding-left);
   display: block;
-  max-width: 100%;
-  width: 26em;
+  width: 100%;
+  max-width: 26em;
 }
 main > div#content-container .testimonial-slider-container .testimonial-item.testimonial-font-dark:has(.testimonial-author-image:empty) .testimonial-main-section .testimonial-content blockqoute::before {
   position: absolute;
@@ -317,6 +329,42 @@ main .layout:has(.hws--bg-blue) .ucr-custom-block {
 }
 main .layout:has(.hws--bg-blue) .layout-builder-block {
   background: rgba(255, 255, 255, 0.1);
+}
+
+main > div#content-container div.primary-content-area .general-menu {
+  border-top: none;
+}
+main > div#content-container div.primary-content-area .general-menu h2 {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-primary-blue);
+  text-transform: capitalize;
+  padding: 0;
+  border: none;
+  margin-bottom: 0.5em;
+}
+main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li a {
+  font-size: 12px;
+  font-weight: 300;
+  padding: 0.75em 0;
+  color: var(--color-primary-blue);
+  border-bottom-color: var(--color-primary-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li a.is-active {
+  color: var(--color-secondary-blue);
+  font-weight: bold;
+}
+main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li a::after {
+  display: none;
+}
+main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li a:hover, main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li a:focus {
+  text-decoration: underline;
+}
+main > div#content-container div.primary-content-area .general-menu ul.menu.vertical li:last-child a {
+  border-bottom: none;
 }
 
 [data-block-plugin-id="block_content:7f5442f2-db23-4c15-a680-bca0d021be4e"] * {

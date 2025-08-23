@@ -1,0 +1,44 @@
+main > div#content-container div.primary-content-area .general-menu {
+  border-top: none;
+
+  h2 {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-primary-blue);
+    text-transform: capitalize;
+    padding: 0;
+    border: none;
+    margin-bottom: .5em;
+  }
+
+  ul.menu.vertical li {
+    a {
+      font-size: 12px;
+      font-weight: 300;
+      padding: .75em 0;
+      color: var(--color-primary-blue);
+      border-bottom-color: var(--color-primary-gold);
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+
+      &.is-active {
+        color: var(--color-secondary-blue);
+        font-weight: bold;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child a {
+      border-bottom: none;
+    }
+  }
+}
